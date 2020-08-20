@@ -1,7 +1,4 @@
 pipeline {
-        agent {
-            label 'tethys'
-        }
  stages{
    stage("rollback") {
    steps{
