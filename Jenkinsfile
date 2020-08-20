@@ -1,4 +1,5 @@
 pipeline {
+        agent any
  stages{
    stage("rollback") {
    steps{
@@ -12,4 +13,3 @@ pipeline {
 
 }
 }
-
