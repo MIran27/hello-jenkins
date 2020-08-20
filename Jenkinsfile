@@ -6,6 +6,7 @@ pipeline {
              sh 'echo $USER'
              sh 'pwd'
              sh 'ls'
+             sh 'git log'
              
     }
     }
