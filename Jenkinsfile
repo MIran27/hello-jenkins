@@ -7,6 +7,8 @@ pipeline {
              sh 'pwd'
              sh 'ls'
              sh 'git log'
+             sh 'git checkout master'
+             sh 'git push'
              
     }
     }
