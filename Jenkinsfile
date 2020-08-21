@@ -3,10 +3,7 @@ pipeline {
  stages{
    stage("rollback") {
    steps{
-             git url: "ssh://jenkins@github.com/MIran27/hello-jenkins.git",
-             credentialsId: '3d29306f-01ac-4fbd-92c6-0d8280ca1c66',
-             branch: master
-
+             
              sh 'echo $USER'
              sh 'pwd'
              sh 'ls'
