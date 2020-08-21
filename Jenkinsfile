@@ -4,14 +4,9 @@ pipeline {
    stage("rollback") {
    steps{
              
-             sh 'echo $USER'
-             sh 'pwd'
-             sh 'ls'
-             sh 'git log'
-             sh 'git checkout master'
-	     sh 'git pull'
-
-             sh    'git push https://${GIT_CREDS_USR}:${GIT_CREDS_PSW}@github.com/MIran27/hello-jenkins.git master'
+             sh 'git checkout feature/miran'
+	     sh 'git revert  --no-edit ${HASH_VALUE} '
+             sh 'git push https://${GIT_CREDS_USR}:${GIT_CREDS_PSW}@github.com/MIran27/hello-jenkins.git master -u origin feature/miran'
              
     }
     }
